@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+    <title> Twittler </title>
+     <link href="index.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+  <body>
+    <header> 
+      <ul> 
+        <li> <a href ="#" class ="active"> Home </a> </li>
+        <li> <a href ="#"> Moments</a>  </li>
+        <li> <a href ="#"> Notifications </a>  </li>
+        <li> <a href="#"> Messages </a>  </li>
+        <li class ="birdIcon"> <a href ="#" >  <i class="fab fa-twitter"></i> </a></li>
+        <li id ="search"> <input type = "text" placeholder="Search Twitter" id ="searchTwitter">  <button> Tweet </button> </li>
+         
+      </ul>
+    </header>
+  <div id ="content">
+  <div id = "intro"> 
+    <div id ="blue"> </div>
+    <div id ="AboutImg"> <img src = "cat.jpg">  
+    
+    <h1> Kathleen Wang </h1>
+    <h2> @kathlwang </h2>
+  </div>
+    <ul> 
+      <li> Tweets <br> <span id ="tweetnum"> 101 </span></li>
+      <li> Following <br> <span> 101 </span> </li>
+      <li> Followers <br> <span> 101 </span> </li>
+    </ul>
+  </div>
+
+
+    <div id = "tweets"> 
+      <div id ="userInput"> 
+      <img src = "cat.jpg"> <input type = "text" placeholder="What's happening?" id ="myTweet">
+    </div>
+    <div id ="alltweets"
+      <div class ="userTweet">
+      </div>
+    </div>
+    </div>
+
+
+    <!-- <div id ="follow">
+    <h1> Who to follow  </h1>
+    <ul> 
+      <li> Refresh </li>
+      <li> View All </li>
+    </ul>
+      <ul> 
+        <li> <a href ="#"> Cats </a> <span> X </span> <br>
+          <button> Follow </button> 
+      </li>
+        <li> <a href ="#">Dogs </a><span> X </span> <br> <button> Follow </button> </li>
+     </div>
+     -->
+
+    <script>
+      var num = 101; 
+      var date = new Date(); 
+      var dateStr = date.toString()
+      var datestr = dateStr.slice(0,dateStr.indexOf('G'))
+      
+        var $body = $('body');
+        var $tweetsDiv = $('#alltweets')
+        var i = 10;
+        var index = streams.home.length - 1;
+       
+          var tweet = streams.home[index];
+           function getTweets() { 
+            tweet.user = randomElement(users);
+            tweet.message = randomMessage();
+        
+          var $tweet = $('<div class ="userTweet"></div>');
+          $tweet.html('<a href = "https://twitter.com/' + tweet.user + '"> @' + tweet.user + '</a> ' + '<span id ="date">' + datestr + '</span>' +  ': ' + tweet.message   );
+          
+          $tweet.prependTo($tweetsDiv);
+        
+      
+        }
+        
+
+       
+       setInterval(function() {
+
+        getTweets();
+      }, 2000); 
+       
+   
+  
+      $('#myTweet').keypress(function(e){
+        if (e.which === 13) {
+          $('#alltweets').prepend('<div class ="userTweet"> <a href ="index.html"> @kathlwang </a> <span id ="date">' + datestr + '</span>' + ': ' + $('#myTweet').val() + '</div>')
+          $('#myTweet').val('')
+          $('#tweetnum').text(num++)
+        }
+
+      })
+
+     
+      $('#searchTwitter').keypress(function(e) {
+        if (e.which === 13) {
+           var searchText = ''; 
+           searchText = $('#searchTwitter').val(); 
+           var tweeturl = 'https://twitter.com/search?q=' + searchText + '&src=typd'
+          
+          window.open(tweeturl, "_blank");
+          $('#searchTwitter').val('')
+        }
+      })
+    </script>
+  </body>
+</html>
