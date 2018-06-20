@@ -1,0 +1,187 @@
+body {
+ background:#e3ecf7;
+ font-family: Helvetica;
+}
+
+ul {
+	list-style-type: none;
+
+}
+ul li {
+ 
+	display:inline-block;
+	padding:10px;
+}
+a { 
+	text-decoration: none;
+	color:#657786;
+ }
+ #search {
+ 	float:right;
+ 	vertical-align: middle;
+ }
+header {
+ 	margin:20px;
+ 	margin-top:0px;
+ 	margin-left:0px;
+	height:30px;
+	width:100%;
+	top:0;
+	left:0;
+	background: white;
+ 	padding:10px;
+ 	position:fixed;
+ 	border-bottom:1px solid grey;
+}
+header ul {
+	margin:0;
+	padding:0;
+	margin-left:100px;
+
+}
+header ul li {
+
+vertical-align: middle;
+padding:5px;
+font-weight: bold;
+font-size:15px;
+
+
+}
+ 
+.fa-twitter { 
+
+color: #1da1f2; }
+
+.birdIcon{
+ margin-left:400px;
+}
+
+.active, header a:hover {
+	color: #1da1f2;
+	padding-bottom:17px;
+	border-bottom: 2px solid #1da1f2;
+}
+header input {
+
+	background: #f7f7f7;
+	border:1px solid lightgrey;
+	border-radius:10px;
+	border-radius: 15px; 
+	padding:5px;
+	margin-right:10px;
+
+}
+header button {
+	margin-bottom:10px;
+	font-weight:bold;
+	margin-right:20px;
+	background: #1da1f2;
+	color:white;
+	border :1px solid #1da1f2;
+	border-radius:35px;
+	padding:10px;
+}
+#content {
+	margin-top:60px;
+}
+#intro {
+
+	background: white;
+	float:left;
+	width:20%;
+	margin-right:0px;
+	margin-left:100px;
+	 
+}
+#blue {
+	margin-left:0;
+	background-color:#1da1f2;
+	width:auto;
+	height:80px;
+
+}
+img {
+	width:50px;
+	height:50px;
+	float:left;
+	border:5px solid white;
+	border-radius: 50%
+}
+ 
+h1 {
+	font-size:20px;
+}
+#intro h2 {
+	font-weight:none;
+	color: #e1e8ed;
+	font-size:15px;
+}
+#intro ul {
+	margin:0;
+	padding-left:15px;
+ }
+#intro li {
+
+	font-weight: bold;
+	float:left;
+	font-size:12px;
+	padding-left:0;
+	color:#657786;
+	 
+}
+#intro span {
+	font-size: 20px;
+	color:#1da1f2;
+}
+#tweets {
+	background-color:lightgrey;
+}
+#userInput {
+	background: #E7F5FD; 
+	padding:10px;
+}
+#userInput input {
+
+	color:#1da1f2;
+	height:20px;
+	border: 1px solid lightblue;
+	border-radius:8px;
+	padding:10px;
+	width:70%;
+}
+#userInput img{
+	border:none;
+	line-height: auto;
+	margin-right:10px;
+	marin-bottom:10px;
+}
+#tweets{
+	margin-left:30px;
+  
+	background: white;
+	width: 40%;
+	float:left;
+	font-size: 15px;
+}
+#tweets a { 
+font-weight: bold; }
+#tweets a:hover { 
+	color:#1da1f2;
+	text-decoration: underline;
+ }
+#date { 
+	color: grey;
+	font-size: 12px;
+ }
+.userTweet{
+	padding:10px;
+	border:1px solid #f7f7f7;
+}
+
+#follow {
+	width:20%;
+	float:left;
+	margin-left:20px;
+	background: white;
+}
